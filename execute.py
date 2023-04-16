@@ -22,7 +22,7 @@ for filename in os.listdir(folder_path):
         # Get the full path to the CSV file
         file_path = os.path.join(folder_path, filename)
         # Define the MySQL LOAD DATA INFILE statement
-        load_data_stmt = f"LOAD DATA INFILE '{file_path}' INTO TABLE sales_data FIELDS TERMINATED BY ',' LINES TERMINATED BY '\\n' "
+        load_data_stmt = f"LOAD DATA INFILE '{file_path}' INTO TABLE table_name FIELDS TERMINATED BY ',' LINES TERMINATED BY '\\n' "
         # Execute the LOAD DATA INFILE statement
         cursor.execute(load_data_stmt)
         cnx.commit()
